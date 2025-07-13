@@ -101,11 +101,27 @@
     }
 
     footer {
-      background: #003366;
+      background-color: #003366;
       color: white;
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
       padding: 1rem;
     }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 2px 0;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
@@ -147,7 +163,11 @@
   </div>
 
   <footer>
-    CPSC
+    <div>CPSC</div>
+    <div class="footer-links">
+      <strong>Links</strong>
+      <a href="https://engage.aps.org/dpf/home" target="_blank">APS DPF Homepage</a>
+    </div>
   </footer>
 
 </body>
