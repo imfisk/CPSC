@@ -99,27 +99,30 @@
     .mission ul {
       padding-left: 1.2rem;
     }
+    .links-section {
+      align-self: flex-end;
+      text-align: right;
+      margin-top: 2rem;
+    }
+    .links-section strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .links-section a {
+      color: #003366;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .links-section a:hover {
+      text-decoration: underline;
+    }
 
     footer {
       background-color: #003366;
       color: white;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: start;
       padding: 1rem;
-    }
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      margin: 2px 0;
-    }
-    .footer-links a:hover {
-      text-decoration: underline;
+      text-align: center;
     }
 
   </style>
@@ -162,12 +165,14 @@
     </main>
   </div>
 
+  <div class="links-section">
+      <strong>Related Links</strong>
+        <a href="https://engage.aps.org/dpf/home" target="_blank">APS DPF</a>
+      </div>
+  </div>
+
   <footer>
-    <div>CPSC</div>
-    <div class="footer-links">
-      <strong>Links</strong>
-      <a href="https://engage.aps.org/dpf/home" target="_blank">APS DPF Homepage</a>
-    </div>
+    CPSC
   </footer>
 
 </body>
