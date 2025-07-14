@@ -53,9 +53,9 @@
       width: 50px;
       height: 50px;
       border-radius: 8px;
-      object-fit: cover; 
+      object-fit: cover;
+   }
 
-    }
     nav h2 {
       font-size: 1.2rem;
       margin-top: 0;
@@ -81,30 +81,6 @@
       padding: 2rem;
       background: #f9f9f9;
     }
-    main {
-      display: flex;
-    }
-
-    .content-wrapper {
-      flex-grow: 1;
-      background-image: url('https://imfisk.github.io/CPSC/wallpaper.jpg');
-      background-size: cover;
-      background-position: center;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .content {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 2rem;
-      border-radius: 8px;
-    }
-
-    .main-text {
-      flex-grow: 1;
-    }
 
     .mission {
       background: white;
@@ -123,32 +99,19 @@
     .mission ul {
       padding-left: 1.2rem;
     }
-    .links-section {
-      align-self: flex-end;
-      text-align: right;
-      margin-top: 2rem;
-    }
-    .links-section strong {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .links-section a {
-      color: #003366;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .links-section a:hover {
-      text-decoration: underline;
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
     }
 
     footer {
-      background-color: #003366;
+      background: #003366;
       color: white;
-      padding: 1rem;
       text-align: center;
+      padding: 1rem;
     }
-
   </style>
 </head>
 <body>
@@ -170,37 +133,25 @@
         <li><a href="https://imfisk.github.io/CPSC/community.html">Community Engagement</a><div class="navicon"><a href="https://imfisk.github.io/CPSC/community.html"><img src="https://imfisk.github.io/CPSC/community.png" alt="Community" /></a></div></li>
         <li><a href="https://imfisk.github.io/CPSC/training.html">Training and Careers</a><div class="navicon"><a href="https://imfisk.github.io/CPSC/training.html"><img src="https://imfisk.github.io/CPSC/presentation.png" alt="Training" /></a></div></li>
         <li><a href="https://imfisk.github.io/CPSC/industry.html">Industry Collaboration</a><div class="navicon"><a href="https://imfisk.github.io/CPSC/industry.html"><img src="https://imfisk.github.io/CPSC/production.png" alt="Industry" /></a></div></li>
-      <li><a href="https://imfisk.github.io/CPSC/industry.html">Prizes and Awards</a><div class="navicon"><a href="https://imfisk.github.io/CPSC/prizes.html"><img src="https://imfisk.github.io/CPSC/trophy.png" alt="Prizes" /></a></div></li> 
       </ul>
     </nav>
 
-    <main class="content-wrapper">
-      <section class="mission">
-        <h2>Welcome</h2>
-       <p>The Coordinating Panel for Software and Computing (CPSC) serves as a forum for the U.S. high energy physics (HEP) community to address shared challenges in scientific computing. 
-       <p>Hosted by the Division of Particles and Fields (DPF) of the American Physical Society(APS), the panel brings together researchers, developers, institutions, and industry partners 
-       to strengthen the software and computing ecosystem that underpins modern HEP research. Through coordination, advocacy, and community-building, CPSC works to foster innovation, 
-       support career development, and ensure the computing infrastructure evolves to meet the demands of current and future experiments. </p>
-       <p>
-        <h2>Mission Statement</h2>
-        <p>The Coordinating Panel for Software and Computing works to strengthen and support the software and computing community that underpins high energy physics (HEP) research in the United States.</p>
-        <p>Hosted by the Division of Particles and Fields of the American Physical Society, the CPSC brings together researchers, developers, institutions, and industry partners to address shared challenges in computing, foster innovation, and promote collaboration across the HEP community.</p>
-        <ul>
-          <li>Motivate support for the Software and Computing community to develop, adopt and operate cutting-edge software and computing technologies</li>
-          <li>Build bridges between science, academia, and industry</li>
-          <li>Support training, recognition, and career development for computing professionals</li>
-          <li>Promote participation and access across the US-HEP community in S&C</li>
-        </ul>
-        <p>By connecting expertise and ideas across disciplines, the CPSC helps ensure that the HEP community is prepared to meet the computational demands of today’s experiments and tomorrow’s discoveries.</p>
+     <p>Insert Descriptions</p>
+
       </section>
     </main>
-  </div>
+<main>
+    <section class="column">
+      <h2>Software and Computing Innovation Award</h2>
+      <p>Placeholder for community news, initiatives, or discussions.</p>
+    </section>
 
-  <div class="links-section">
-      <strong>Related Links</strong>
-        <a href="https://engage.aps.org/dpf/home" target="_blank">APS DPF</a>
-        <a href="https://cpad-dpf.org">CPAD</a>
-      </div>
+    <section class="column">
+      <h2>Software and Computing Impact Award</h2>
+      <p>Placeholder for software development, computing strategy, workflows, etc.</p>
+    </section>
+  </main>
+
   </div>
 
   <footer>
