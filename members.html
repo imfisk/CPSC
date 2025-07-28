@@ -106,6 +106,48 @@
       text-align: center;
       padding: 1rem;
     }
+
+    .members-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .member-card img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+
+    .member-card h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #003366;
+    }
+
+    .member-card .institution {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0.5rem 0;
+      font-style: italic;
+    }
+
+    .member-card .term {
+      font-size: 0.8rem;
+      color: #888;
+      margin: 0.25rem 0;
+    }
   </style>
 </head>
 <body>
@@ -129,35 +171,68 @@
         <li><a href="https://imfisk.github.io/CPSC/industry.html">Industry Collaboration</a><div class="navicon"><a href="https://imfisk.github.io/CPSC/industry.html"><img src="https://imfisk.github.io/CPSC/production.png" alt="Industry" /></a></div></li>
         <li><a href="https://imfisk.github.io/CPSC/prizes.html">Prizes and Awards</a><div class="navicon"><a href="https://imfisk.github.io/CPSC/prizes.html"><img src="https://imfisk.github.io/CPSC/trophy.png" alt="Prizes" /></a></div></li>  
       </ul>
-    </nav>
+    </nav>    
 
-    <main class="content">
-      <section class="mission">
-        <h2>Committee Members</h2>
- <p>The committee members were chosen from nominees to the DPF.&nbsp; &nbsp;We will be seeking new members annually, if you are interested in joining.&nbsp; &nbsp; &nbsp; &nbsp;</p>
-  <p>Gavin Davies</p>
-  <p>Sam Foreman&nbsp;</p>
-  <p>Giordon Stark&nbsp;</p>
-  <p>Ian Fisk&nbsp;</p>
-  <p>Ken Herner&nbsp;</p>
-  <p>Leslie Groer&nbsp;</p>
-  <p>Lothar Bauerdick&nbsp;</p>
-  <p>Maria Elena Monzani&nbsp;</p>
-  <p>Matthew Feickert&nbsp;</p>
-  <p>Stephen Mrenna&nbsp;</p>
-  <p>Peter Boyle&nbsp;</p>
-  <p>Phiala Shanahan&nbsp;</p>
-  <p>Rebecca Rapp&nbsp;</p>
-  <p>Verena Ingrid Martinez Outschoorn</p>
-  <p>Victor Daniel Elvira&nbsp;</p>
+  <main class="content">
+    <h2>Committee Members</h2>
+    <p>The committee members were chosen from nominees to the DPF. We will be seeking new members annually, if you are interested in joining.</p>
+    <section class="members-gallery" id="gallery"></section>
 
-      </section>
-    </main>
+  <script>
+    const members = [
+      { name: "Lothar Bauerdick", institution: "Fermi National Accelerator Laboratory", term: "2025-2026" },
+      { name: "Peter Boyle", institution: "Brookhaven National Laboratory", term: "2025-2026" },
+      { name: "Gavin S. Davies", institution: "University of Mississippi", term: "2025-2027" },
+      { name: "Victor Daniel Elvira", institution: "Fermi National Accelerator Laboratory", term: "2025-2026" },
+      { name: "Matthew Feickert", institution: "University of Wisconsin-Madison Data Science Institute", term: "2025-2026" },
+      { name: "Ian Fisk (CPSC Chair)", institution: "Flatiron Institute, Simons Foundation", term: "2025-2028" },
+      { name: "Sam Foreman", institution: "Argonne National Laboratory", term: "2025-2026" },
+      { name: "Leslie Groer", institution: "University of Toronto", term: "2025-2027" },
+      { name: "Ken Herner", institution: "Fermi National Accelerator Laboratory", term: "2025-2026" },
+      { name: "Verena Ingrid Martinez Outschoorn", institution: "University of Massachusetts, Amherst", term: "2025-2027" },
+      { name: "Maria Elena Monzani", institution: "SLAC National Accelerator Laboratory", term: "2025-2026" },
+      { name: "Stephen Mrenna", institution: "Fermi National Accelerator Laboratory", term: "2025-2026" },
+      { name: "Rebecca Rapp", institution: "Washington & Jefferson College", term: "2025-2026" },
+      { name: "Phiala Shanahan", institution: "Massachusetts Institute of Technology", term: "2025-2026" },
+      { name: "Giordon Stark", institution: "University of California, Santa Cruz", term: "2025-2027" }
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    members.forEach(member => {
+      const card = document.createElement("div");
+      card.className = "member-card";
+
+      const img = document.createElement("img");
+      const filename = member.name.toLowerCase().replace(/\s+/g, "_") + ".jpg";
+      img.src = "photos/" + filename; // expects a photos folder
+      img.alt = member.name;
+      img.onerror = () => img.src = "photos/placeholder.png";
+
+      const title = document.createElement("h3");
+      title.textContent = member.name;
+
+      const institution = document.createElement("div");
+      institution.className = "institution";
+      institution.textContent = member.institution;
+
+      const term = document.createElement("div");
+      term.className = "term";
+      term.textContent = `Term: ${member.term}`;
+
+      card.appendChild(img);
+      card.appendChild(title);
+      card.appendChild(institution);
+      card.appendChild(term);
+      gallery.appendChild(card);
+    });
+  </script>
+  </main>
   </div>
+</body>
 
-  <footer>
+<footer>
     CPSC
   </footer>
 
-</body>
 </html>
