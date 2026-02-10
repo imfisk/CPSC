@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coordinating Panel for Software and Computing (CPSC)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #003366;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    nav {
+      width: 250px;
+      background: #f0f0f0;
+      padding: 1rem;
+      box-shadow: inset -1px 0 0 #ccc;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo img {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .navicon img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      object-fit: cover;
+   }
+
+    nav h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 1rem 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+    }
+
+    .content {
+      flex: 1;
+      padding: 2rem;
+      background: #f9f9f9;
+    }
+
+    .mission {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .mission h2 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .mission ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Coordinating Panel for Software and Computing (CPSC)</h1>
+  </header>
+
+  <div class="container">
+    <nav id="cpsc-nav">
+      <!-- Navigation will be loaded by JavaScript -->
+    </nav>    
+    <script src="js/navigation.js"></script>
+
+    <main class="content">
+      <section class="mission">
+        <h2>An AI-native Research Ecosystem for Experimental Particle Physics</h2>
+    <h3>Drafts</h3>
+    <ul>
+    <li>Draft 0.8 - Coming Soon</li>
+    </ul>
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    CPSC
+  </footer>
+
+</body>
+</html>
